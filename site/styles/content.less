@@ -157,3 +157,167 @@ section#depth article:nth-of-type(2) {
  		margin-left: 5rem;
  	}
 }
+
+
+div#image_holder {
+	width: 100%;
+	background-image: url(../images/page_7.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center top;
+ 	min-height: 600px;
+ 	margin-top: -1px;
+}
+/**
+*	Section example
+*/
+
+section#example {
+	padding: 1rem;
+	position: relative;
+}
+
+section#example article {
+	text-align: center;
+
+	& h1 {
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		font-size: 2.5rem;
+		font-weight: 400;
+	}
+
+	& p {
+		display: block;
+		width: 50%;
+		margin: 0 auto;
+		margin-top: @paragraph_spacing;
+		font-size: 1.3rem;
+		font-weight: 400;	
+	}
+
+	& p:last-of-type {
+		position: absolute;
+	    bottom: 0;
+	    left: 25%;
+	    border: 1px solid white;
+	    padding: 4rem 3rem;
+	    background-color: @color_background;
+	}
+}
+
+section#example svg {
+	display: block;
+	margin-top: 3rem;
+}
+
+/**
+*	Section about
+*/
+
+section#about {
+	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
+}
+
+section#about article:nth-of-type(1) {
+	background-image: url(../images/ronen.jpg);
+	background-position: 80%;
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+	min-height: 300px;
+	padding: 1rem;
+
+	& h1 {
+		width: 45%;
+		margin-left: 13%;
+
+	}
+
+	& p {
+		width: 40%;
+		font-size: 1.3rem;
+		margin-left: 13%;
+	}
+}
+
+section#about article:nth-of-type(2) {
+	background-image: url(../images/android.jpg);
+	background-position: 76%;
+	background-size: 170px 300px;
+	background-repeat: no-repeat;
+	min-height: 300px;
+	padding: 1rem;
+	margin-top: 4rem;
+
+	& h1 {
+		width: 45%;
+		margin-left: 13%;
+
+	}
+
+	& p {
+		width: 40%;
+		font-size: 1.3rem;
+		margin-left: 13%;
+	}
+}
+
+/**
+*	Section development
+*/
+
+section#development {
+	padding: @section_spacing 0;
+}
+
+section#development article:nth-of-type(1) {
+	// background-image: url(../images/.jpg);
+	// background-position: 80%;
+	// background-size: 300px 300px;
+	// background-repeat: no-repeat;
+	min-height: 300px;
+	padding: 1rem;
+
+	& h1 {
+		width: 30%;
+		margin-left: 17%;
+
+		&:first-of-type{
+			font-weight: 400;
+		}
+	}
+
+	& p {
+		width: 28%;
+		font-size: 1.3rem;
+		margin-left: 17%;
+	}
+}
+
+section#development article:nth-of-type(2) {
+	background-image: url(../images/earphones.jpg);
+	background-position: 76%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	min-height: 400px;
+	padding: 1rem;
+	margin-top: 4rem;
+
+	& h1 {
+		width: 30%;
+		margin-left: 17%;
+
+		&:first-of-type{
+			font-weight: 400;
+		}
+
+	}
+
+	& p {
+		width: 28%;
+		font-size: 1.3rem;
+		margin-left: 17%;
+	}
+}
+

@@ -32,6 +32,46 @@
 					template="stock/article_generic.xml"
 					/>
 			</section>
+
+			<!-- Div to hold image of band -->
+			<div id="image_holder"></div>
+
+			<!-- Example of how sound is functioning -->
+			<section id="example">
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="example"
+					template="stock/article_generic.xml"
+					/>
+
+				<cms:svg file="band.svg"/>
+			</section>
+
+			<!-- Section about owner and android app -->
+			<section id="about">
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="about"
+					template="stock/article_generic.xml"
+					/>
+				<!-- Google play link -->
+				<!-- <a 
+					href='https://play.google.com/store/apps/details?id=com.music.android.equalizerfx&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+					<img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+				</a> -->
+			</section>
+
+			<!-- Section about products in development -->
+			<section id="development">
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="development"
+					template="stock/article_generic.xml"
+					/>
+			</section>
 		</body>
 	</html>
 </document>

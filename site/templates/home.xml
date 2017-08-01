@@ -22,6 +22,16 @@
 					template="stock/article_generic.xml"
 					/>
 			</section>
+
+			<!-- Section depth, about sound depth as third dimension of sound-->
+			<section id="depth">
+				<cms:module
+					name="articles"
+					action="show_list"
+					group="depth"
+					template="stock/article_generic.xml"
+					/>
+			</section>
 		</body>
 	</html>
 </document>

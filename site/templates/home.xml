@@ -57,10 +57,9 @@
 					template="stock/article_generic.xml"
 					/>
 				<!-- Google play link -->
-				<!-- <a 
-					href='https://play.google.com/store/apps/details?id=com.music.android.equalizerfx&hl=en&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+				<a href='https://play.google.com/store/apps/details?id=com.music.android.equalizerfx&amp;hl=en&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge Mar2515-1' target="_blank">
 					<img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
-				</a> -->
+				</a>
 			</section>
 
 			<!-- Section about products in development -->
@@ -72,6 +71,29 @@
 					template="stock/article_generic.xml"
 					/>
 			</section>
+
+			<!-- Section development advantages -->
+			<section id="advantages">
+				<ul>
+					<cms:module
+						name="articles"
+						action="show_list"
+						group="advantages"
+						template="stock/features_generic.xml"
+						>
+						<param name="sprite" value="site_sprite.svg"/>
+					</cms:module>
+				</ul>
+			</section>
+
+			<footer>
+				<cms:module
+					name="articles"
+					action="show"
+					text_id="footer"
+					template="stock/article_generic.xml"
+					/>
+			</footer>
 		</body>
 	</html>
 </document>

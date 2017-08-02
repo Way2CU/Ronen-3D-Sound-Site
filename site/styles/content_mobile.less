@@ -5,3 +5,185 @@
  * Copyright (c) 2017. by Way2CU, http://way2cu.com
  * Authors: Vladimir Anusic
  */
+
+header {
+ 	background-image: url(../images/mobile_header.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center center;
+ 	min-height: 400px;
+
+ 	& h1 {
+ 		display: block;
+	    text-align: center;
+	    margin-top: 1rem;
+	    font-size: 2.5rem;
+	    font-weight: 400;
+ 	}
+}
+
+/**
+*	Section introduction
+*/
+
+section#introduction article:nth-of-type(1) {
+ 	background-image: url(../images/mobile_page_2.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center bottom;
+ 	min-height: 500px;
+ 	text-align: center;
+ 	padding: 1rem;
+
+ 	& h1 {
+ 		font-size: 2.5rem;
+ 		font-weight: 400;
+ 		margin-top: 4rem;
+ 	}
+
+ 	& p {
+ 		font-size: 1.5rem;
+ 	}
+}
+
+section#introduction article:nth-of-type(2) {
+ 	background-image: url(../images/mobile_page_3.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center bottom;
+ 	min-height: 400px;
+ 	text-align: center;
+ 	padding: 1rem;
+
+ 	& p {
+ 		font-size: 1.5rem;
+ 		margin-top: 10%;
+
+ 		& em {
+ 			font-style: normal;
+
+ 			&:nth-of-type(1) {
+ 				color: @color_red;
+ 			}
+
+ 			&:nth-of-type(2) {
+ 				color: @color_blue;
+ 			}
+
+ 			&:nth-of-type(3) {
+ 				color: @color_green;
+ 			}
+ 		}
+ 	}
+}
+
+section#introduction article:nth-of-type(3) {
+ 	background-image: url(../images/mobile_page_4.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center bottom;
+ 	min-height: 530px;
+ 	text-align: center;
+ 	padding: 1rem;
+
+ 	& h1 {
+ 		font-size: 3rem;
+ 		font-weight: 400;
+ 	}
+
+ 	& p {
+ 		margin-top: 4rem;
+ 		font-size: 1.5rem;
+	}
+}
+
+/**
+*	Section depth
+*/
+
+section#depth article:nth-of-type(1) {
+ 	padding: 1rem;
+ 	background-image: url(../images/mobile_page_5.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center bottom;
+ 	min-height: 650px;
+ 	text-align: center;
+
+ 	& h1 {
+ 		font-size: 2.5rem;
+ 		font-weight: 400;
+ 	}
+
+ 	& p {
+ 		font-size: 1.5rem;
+ 	}
+}
+
+section#depth article:nth-of-type(2) {
+ 	padding: 1rem;
+ 	background-image: url(../images/mobile_page_6.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center bottom;
+ 	min-height: 500px;
+
+ 	& p {
+ 		margin-top: 10%;
+ 		font-size: 1.5rem;
+ 	}
+}
+
+div#image_holder {
+	width: 100%;
+	background-image: url(../images/page_7.jpg);
+ 	background-repeat: no-repeat;
+ 	background-size: 100% auto;
+ 	background-position: center top;
+ 	min-height: 300px;
+}
+
+/**
+*	Section example
+*/
+
+section#example {
+	position: relative;
+	padding: 1rem;
+}
+
+section#example article {
+	text-align: center;
+	padding: 1rem;
+
+	& h1 {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 400;
+	}
+
+	& p {
+		display: block;
+		margin-top: @paragraph_spacing;
+		font-size: 1.3rem;
+		font-weight: 400;	
+	}
+
+	& p:last-of-type {
+		position: absolute;
+	    bottom: 18%;
+	    left: 0;
+	    border-top: 1px solid white;
+	    border-bottom: 1px solid white;
+	    padding: 0.5rem;
+	    background-color: @color_background;
+	}
+}
+
+section#example svg {
+	display: block;
+	
+	&:last-of-type {
+		margin-top: 45%;
+	}
+}

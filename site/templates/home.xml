@@ -33,8 +33,10 @@
 					/>
 			</section>
 
-			<!-- Div to hold image of band -->
-			<div id="image_holder"></div>
+			<cms:desktop>
+				<!-- Div to hold image of band -->
+				<div id="image_holder"></div>
+			</cms:desktop>
 
 			<!-- Example of how sound is functioning -->
 			<section id="example">
@@ -45,7 +47,15 @@
 					template="stock/article_generic.xml"
 					/>
 
-				<cms:svg file="band.svg"/>
+				<cms:desktop>
+					<cms:svg file="band.svg"/>
+				</cms:desktop>
+
+				<cms:mobile>
+					<div id="image_holder"></div>
+					<cms:svg file="top_band.svg"/>
+					<cms:svg file="bottom_band.svg"/>
+				</cms:mobile>
 			</section>
 
 			<!-- Section about owner and android app -->

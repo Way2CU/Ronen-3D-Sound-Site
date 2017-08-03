@@ -220,9 +220,23 @@ section#example svg {
 section#about {
 	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
 
+	& a {
+		display: block;
+		width: 300px;
+		height: 115px;
+		box-sizing: border-box;
+		transform: translate(150px, -50px);
+		transition: all 0.3s;
+
+		&:hover img,
+		&:active img, {
+			transform: translateZ(10px);
+			transition: all 0.3s;
+		}
+	}
+
 	& a img {
 		width: 300px;
-		transform: translate(150px, -50px);
 	}
 }
 
@@ -333,6 +347,11 @@ section#development article:nth-of-type(2) {
 
 section#advantages {
 	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
+	text-align: center;
+
+	h1 {
+		margin-bottom: 3rem;
+	}
 
 	& ul {
 		display: block;

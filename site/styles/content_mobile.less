@@ -11,13 +11,12 @@ header {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center center;
- 	min-height: 400px;
+ 	min-height: 300px;
 
  	& h1 {
  		display: block;
 	    text-align: center;
 	    margin-top: 1rem;
-	    font-size: 2.5rem;
 	    font-weight: 400;
  	}
 }
@@ -31,18 +30,13 @@ section#introduction article:nth-of-type(1) {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center bottom;
- 	min-height: 500px;
+ 	min-height: 450px;
  	text-align: center;
  	padding: 1rem;
 
  	& h1 {
- 		font-size: 2.5rem;
  		font-weight: 400;
  		margin-top: 4rem;
- 	}
-
- 	& p {
- 		font-size: 1.5rem;
  	}
 }
 
@@ -51,12 +45,11 @@ section#introduction article:nth-of-type(2) {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center bottom;
- 	min-height: 400px;
+ 	min-height: 300px;
  	text-align: center;
  	padding: 1rem;
 
  	& p {
- 		font-size: 1.5rem;
  		margin-top: 10%;
 
  		& em {
@@ -82,18 +75,16 @@ section#introduction article:nth-of-type(3) {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center bottom;
- 	min-height: 530px;
+ 	min-height: 450px;
  	text-align: center;
  	padding: 1rem;
 
  	& h1 {
- 		font-size: 3rem;
  		font-weight: 400;
  	}
 
  	& p {
  		margin-top: 4rem;
- 		font-size: 1.5rem;
 	}
 }
 
@@ -107,16 +98,11 @@ section#depth article:nth-of-type(1) {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center bottom;
- 	min-height: 650px;
+ 	min-height: 550px;
  	text-align: center;
 
  	& h1 {
- 		font-size: 2.5rem;
  		font-weight: 400;
- 	}
-
- 	& p {
- 		font-size: 1.5rem;
  	}
 }
 
@@ -126,11 +112,11 @@ section#depth article:nth-of-type(2) {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center bottom;
- 	min-height: 500px;
+ 	min-height: 450px;
+ 	text-align: center;
 
  	& p {
  		margin-top: 10%;
- 		font-size: 1.5rem;
  	}
 }
 
@@ -140,7 +126,7 @@ div#image_holder {
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center top;
- 	min-height: 300px;
+ 	min-height: 250px;
 }
 
 /**
@@ -149,7 +135,6 @@ div#image_holder {
 
 section#example {
 	position: relative;
-	padding: 1rem;
 }
 
 section#example article {
@@ -158,32 +143,164 @@ section#example article {
 
 	& h1 {
 		display: block;
-		font-size: 2.5rem;
 		font-weight: 400;
 	}
 
 	& p {
 		display: block;
 		margin-top: @paragraph_spacing;
-		font-size: 1.3rem;
 		font-weight: 400;	
 	}
 
 	& p:last-of-type {
 		position: absolute;
-	    bottom: 18%;
+	    bottom: 75vw;
 	    left: 0;
 	    border-top: 1px solid white;
 	    border-bottom: 1px solid white;
-	    padding: 0.5rem;
+	    padding: 1rem;
 	    background-color: @color_background;
 	}
 }
 
 section#example svg {
 	display: block;
+	margin: 0 auto;
+	width: 300px;
+	height: 300px;
 	
 	&:last-of-type {
-		margin-top: 45%;
+		margin-top: 60vw;
+	}
+}
+
+/**
+*	Section about
+*/
+
+section#about {
+
+	& a {
+		display: block;
+		margin: 0 auto;
+		transform: translateY(-415px); 
+		
+	}
+
+	& a img {
+		width: 300px;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+section#about article:nth-of-type(1) {
+	background-image: url(../images/ronen.jpg);
+	background-position: center bottom;
+	background-size: 300px 300px;
+	background-repeat: no-repeat;
+	min-height: 600px;
+	padding: 1rem;
+	text-align: center;
+}
+
+section#about article:nth-of-type(2) {
+	background-image: url(../images/android.jpg);
+	background-position: center bottom;
+	background-size: 170px 300px;
+	background-repeat: no-repeat;
+	min-height: 730px;
+	padding: 1rem;
+	text-align: center;
+}
+
+/**
+*	Section development
+*/
+
+section#development {
+}
+
+section#development article:nth-of-type(1) {
+	background-image: url(../images/adapter.jpg), url(../images/package.jpg);
+	background-position: 31% 50%, 31% 85%;
+	background-size: 300px 100px, 300px 300px;
+	background-repeat: no-repeat;
+	min-height: 830px;
+	padding: 1rem;
+	text-align: center;
+
+	& h1 {
+
+		&:first-of-type{
+			font-weight: 400;
+		}
+	}
+}
+
+section#development article:nth-of-type(2) {
+	background-image: url(../images/mobile_earphones.jpg);
+	background-position: center bottom;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	min-height: 550px;
+	padding: 1rem;
+	text-align: center;
+
+	& h1 {
+
+		&:first-of-type{
+			font-weight: 400;
+		}
+
+	}
+}
+
+/**
+*	Section advantages
+*/
+
+section#advantages {
+	padding: 1rem;
+	text-align: center;
+
+	& ul {
+		display: block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		& li {
+			display: block;
+			width: 100%;
+			margin-bottom: 2rem;
+
+			& svg {
+				fill: @color_text;
+				width: 80px;
+				height: 80px;
+				display: block;
+				margin: 0 auto;
+				margin-bottom: 1rem;
+			}
+		}
+	}
+}
+
+/**
+*	Footer
+*/
+
+footer {
+	background-image: url(../images/mobile_footer.jpg);
+	background-position: center bottom;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	text-align: center;
+	min-height: 1050px;
+
+	& article {
+		padding: 1rem;
+
 	}
 }

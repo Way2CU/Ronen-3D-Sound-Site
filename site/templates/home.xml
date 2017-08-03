@@ -84,6 +84,7 @@
 
 			<!-- Section development advantages -->
 			<section id="advantages">
+				<h1><cms:text constant="advantages_title"/></h1>
 				<ul>
 					<cms:module
 						name="articles"

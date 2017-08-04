@@ -106,6 +106,17 @@ section#introduction article:nth-of-type(3) {
  		width: 45%;
  		font-size: 3.5rem;
  		font-weight: 400;
+ 		position: relative;
+ 		color: #939393;
+
+ 		&:after {
+ 			content: "";
+ 			position: absolute;
+ 			width: 605px;
+ 			height: 64px;
+ 			left: 0;
+ 			background-image: linear-gradient(90deg, rgba(147, 147, 147, 0) 0%, rgba(45,45,45,1) 100%);
+ 		}
  	}
 
  	& p {
@@ -230,7 +241,8 @@ section#about {
 
 		&:hover img,
 		&:active img, {
-			transform: translateZ(10px);
+			transform: scale(1.1);
+			cursor: pointer;
 			transition: all 0.3s;
 		}
 	}
@@ -408,5 +420,13 @@ footer {
 			margin-left: 17%;
 		}
 	}
+}
+
+div.copyright {
+	text-align: center;
+	background-color: black;
+	color: white;
+
+	background-position: calc(~'50% - 100px') center
 }
 

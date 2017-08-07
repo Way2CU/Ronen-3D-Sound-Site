@@ -10,6 +10,10 @@
 *	Header
 */
 
+body svg {
+	display: none;
+}
+
 header {
  	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
  	background-image: url(../images/header.jpg);
@@ -18,15 +22,24 @@ header {
  	background-position: center center;
  	min-height: 600px;
  	position: relative;
+
+ 	html[dir=rtl] & {
+ 		background-image: url(../images/header_rtl.jpg);
+ 	}
 }
 
 header h1 {
  	width: 40%;
 	position: absolute;
-	top: 25%;
+	top: 22%;
 	left: 18%;
 	font-size: 4rem;
-	font-weight: 400; 	
+	font-weight: 400; 
+
+	html[dir=rtl] & {
+		left: none;
+		right: 18%;
+	}	
 }
 
 /**
@@ -61,6 +74,18 @@ section#introduction article:nth-of-type(1) {
  		width: 30%;
  		font-size: 1.5rem;
  	}
+
+ 	html[dir=rtl] & {
+ 		background-image: url(../images/page_2_rtl.jpg);
+
+ 		& h1 {
+ 			margin-right: 5rem;
+ 		}
+
+ 		& p {
+ 			margin-right: 5rem;
+ 		}
+ 	}
 }
 
 section#introduction article:nth-of-type(2) {
@@ -90,6 +115,14 @@ section#introduction article:nth-of-type(2) {
  			&:nth-of-type(3) {
  				color: @color_green;
  			}
+ 		}
+ 	}
+
+ 	html[dir=rtl] & {
+ 		background-image: url(../images/page_3_rtl.jpg);
+
+ 		& p {
+ 			margin-right: 5rem;
  		}
  	}
 }
@@ -124,6 +157,22 @@ section#introduction article:nth-of-type(3) {
  		width: 35%;
  		font-size: 1.5rem;
 	}
+
+	html[dir=rtl] & {
+ 		background-image: url(../images/page_4_rtl.jpg);
+
+ 		& h1 {
+ 			margin-right: 5rem;
+
+ 			&:after {
+ 				background-image: linear-gradient(-90deg, rgba(147, 147, 147, 0) 0%, rgba(45,45,45,1) 100%);
+ 			}
+ 		}
+
+ 		& p {
+ 			margin-right: 5rem;
+ 		}
+ 	}
 }
 
 /**
@@ -166,6 +215,14 @@ section#depth article:nth-of-type(2) {
  		width: 30%;
  		font-size: 1.5rem;
  		margin-left: 5rem;
+ 	}
+
+ 	html[dir=rtl] & {
+ 		background-image: url(../images/page_6_rtl.jpg);
+
+ 		& p {
+ 			margin-right: 5rem;
+ 		}
  	}
 }
 
@@ -236,7 +293,7 @@ section#about {
 		width: 300px;
 		height: 115px;
 		box-sizing: border-box;
-		transform: translate(150px, -50px);
+		transform: translate(150px, -40px);
 		transition: all 0.3s;
 
 		&:hover img,
@@ -244,6 +301,10 @@ section#about {
 			transform: scale(1.1);
 			cursor: pointer;
 			transition: all 0.3s;
+		}
+
+		html[dir=rtl] & {
+			transform: translate(-150px, -40px);
 		}
 	}
 
@@ -271,6 +332,20 @@ section#about article:nth-of-type(1) {
 		font-size: 1.3rem;
 		margin-left: 13%;
 	}
+
+	html[dir=rtl] & {
+		background-position: 20%;
+
+		& h1 {
+			margin-left: 0;
+			margin-right: 13%;
+		}
+
+		& p {
+			margin-left: 0;
+			margin-right: 13%;
+		}
+	}
 }
 
 section#about article:nth-of-type(2) {
@@ -292,6 +367,20 @@ section#about article:nth-of-type(2) {
 		width: 40%;
 		font-size: 1.3rem;
 		margin-left: 13%;
+	}
+
+	html[dir=rtl] & {
+		background-position: 23%;
+
+		& h1 {
+			margin-left: 0;
+			margin-right: 13%;
+		}
+
+		& p {
+			margin-left: 0;
+			margin-right: 13%;
+		}
 	}
 }
 
@@ -325,6 +414,20 @@ section#development article:nth-of-type(1) {
 		font-size: 1.3rem;
 		margin-left: 17%;
 	}
+
+	html[dir=rtl] & {
+		background-position: 60% 100%, 20%;
+
+		& h1 {
+			margin-left: 0;
+			margin-right: 17%;
+		}
+
+		& p {
+			margin-left: 0;
+			margin-right: 17%;
+		}
+	}
 }
 
 section#development article:nth-of-type(2) {
@@ -350,6 +453,21 @@ section#development article:nth-of-type(2) {
 		width: 28%;
 		font-size: 1.3rem;
 		margin-left: 17%;
+	}
+
+	html[dir=rtl] & {
+		background-image: url(../images/earphones_rtl.jpg);
+		background-position: 23%;
+
+		& h1 {
+			margin-left: 0;
+			margin-right: 17%;
+		}
+
+		& p {
+			margin-left: 0;
+			margin-right: 17%;
+		}
 	}
 }
 
@@ -382,6 +500,11 @@ section#advantages {
 				height: 50px;
 				display: inline-block;
 				margin-right: 1rem;
+
+				html[dir=rtl] & {
+					margin-right: 0;
+					margin-left: 1rem;
+				}
 			}
 
 			& p {
@@ -418,6 +541,21 @@ footer {
 			width: 35%;
 			display: block;
 			margin-left: 17%;
+		}
+	}
+
+	html[dir=rtl] & {
+		background-image: url(../images/footer_rtl.jpg);
+		background-position: 20%;
+
+		& h1 {
+			margin-left: 0;
+			margin-right: 17%;
+		}
+
+		& p {
+			margin-left: 0;
+			margin-right: 17%;
 		}
 	}
 }

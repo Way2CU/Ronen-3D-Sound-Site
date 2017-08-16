@@ -34,12 +34,12 @@ header h1 {
 	top: 22%;
 	left: 18%;
 	font-size: 4rem;
-	font-weight: 400; 
+	font-weight: 400;
 
 	html[dir=rtl] & {
 		left: none;
 		right: 18%;
-	}	
+	}
 }
 
 /**
@@ -160,6 +160,10 @@ section#introduction article:nth-of-type(3) {
  	background-position: center center;
  	min-height: 350px;
 
+ 	& h1 {
+ 		display: none;
+ 	}
+
  	& p {
  		margin-top: 4rem;
  		width: 35%;
@@ -191,7 +195,7 @@ section#depth article:nth-of-type(1) {
  	& h1 {
  		font-size: 2.5rem;
  		font-weight: 400;
- 		margin-top: 4rem;
+ 		margin-top: 3rem;
  	}
 
  	& p {
@@ -211,8 +215,8 @@ section#depth article:nth-of-type(2) {
  	min-height: 400px;
 
  	& p {
- 		margin-top: 10%;
- 		width: 30%;
+ 		margin-top: 8%;
+ 		width: 33%;
  		font-size: 1.5rem;
  		margin-left: 5rem;
  	}
@@ -263,7 +267,7 @@ section#example article {
 		margin: 0 auto;
 		margin-top: @paragraph_spacing;
 		font-size: 1.3rem;
-		font-weight: 400;	
+		font-weight: 400;
 	}
 
 	& p:last-of-type {

@@ -25,6 +25,10 @@ header {
 *	Section introduction
 */
 
+section#introduction h1#fade_out {
+	display: none;
+}
+
 section#introduction article:nth-of-type(1) {
  	background-image: url(../images/mobile_page_2.jpg);
  	background-repeat: no-repeat;
@@ -162,7 +166,7 @@ section#example article {
 	& p {
 		display: block;
 		margin-top: @paragraph_spacing;
-		font-weight: 400;	
+		font-weight: 400;
 	}
 
 	& p:last-of-type {
@@ -181,7 +185,7 @@ section#example svg {
 	margin: 0 auto;
 	width: 300px;
 	height: 300px;
-	
+
 	&:last-of-type {
 		margin-top: 60vw;
 	}
@@ -196,7 +200,7 @@ section#about {
 	& a {
 		display: block;
 		margin: 0 auto;
-		transform: translateY(-415px); 
+		transform: translateY(-415px);
 
 		&:active img {
 			transform: scale(1.1);

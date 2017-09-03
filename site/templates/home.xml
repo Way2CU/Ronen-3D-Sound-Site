@@ -52,7 +52,6 @@
 					</h1>
 			</section>
 
-			
 			<!-- Section depth, about sound depth as third dimension of sound-->
 			<section id="depth">
 				<cms:module
@@ -96,6 +95,7 @@
 					group="about"
 					template="stock/article_generic.xml"
 					/>
+
 				<!-- Google play link -->
 				<a href='https://play.google.com/store/apps/details?id=com.music.android.equalizerfx&amp;hl=en&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge Mar2515-1' target="_blank">
 					<img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>

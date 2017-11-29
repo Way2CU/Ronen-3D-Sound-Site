@@ -140,6 +140,39 @@
 				<param name="holder" value="copyright_holder"/>
 				<param name="text" value="copyright_rights"/>
 			</cms:template>
+
+			<cms:mobile>
+				<a href="javascript: void(0);" id="form_link">
+					<cms:text constant="form_link"/>
+				</a>
+			</cms:mobile>
+
+			<cms:desktop>
+				<div id="contact_form" class="visible">
+
+					<!-- banner opener button -->
+					<a href="javascript: void(0);">
+						<cms:text constant="form_link"/>
+					</a>
+
+					<!-- contact form as banner -->
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:desktop>
+
+			<cms:mobile>
+				<div id="dialog_contact_form">
+					<cms:module
+						name="contact_form"
+						action="show"
+						text_id="contact_form"
+						/>
+				</div>
+			</cms:mobile>
 		</body>
 	</html>
 </document>

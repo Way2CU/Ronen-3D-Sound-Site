@@ -7,8 +7,6 @@
 			<cms:module name="head_tag" action="print_tag"/>
 		</head>
 		<body>
-			<cms:svg file="site_sprite.svg"/>
-
 			<header>
 				<h1><cms:text constant="header_title"/></h1>
 			</header>

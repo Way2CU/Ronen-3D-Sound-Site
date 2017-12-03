@@ -14,8 +14,104 @@ body svg {
 	display: none;
 }
 
+div#contact_form {
+	display: block;
+	position: fixed;
+	top: 100px;
+	right: -460px;
+	z-index: 1000;
+	text-align: center;
+	width: 460px;
+	background-color: darken(@color_blue, 20%);
+	padding: 1rem 0;
+	transition: right 1s;
+
+	a {
+		position: absolute;
+	    top: 74px;
+	    right: 385px;
+	    width: 160px;
+	    padding: 1rem 2rem;
+	    font-size: 2rem;
+	    transform: rotate(-90deg);
+	    background-color: fade(@color_blue, 80%);
+	    box-shadow: 0px 1px 10px 0px @color_background;
+	    text-decoration: none;
+	    color: @color_text;
+	    transition: all 0.3s;
+
+	    &:hover {
+	    	right: 380px;
+	    	transition: all 0.3s;
+	    }
+	}
+
+	&.visible {
+		top: 100px;
+		right: 0;
+		transition: right 1s;
+	}
+
+	form {
+		padding: 1rem 2rem;
+
+		label {
+			display: block;
+			margin-bottom: 1rem;
+
+			input {
+				display: block;
+				padding: 0.5rem 0.5rem;
+				box-sizing: border-box;
+				border: 1px solid transparent;
+				width: 100%;
+
+				&:hover,
+				&:active {
+					border: 1px solid @color_green;
+				}
+			}
+
+			textarea {
+				resize: vertical;
+				padding: 0.5rem 0.5rem;
+				border: 1px solid transparent;
+				box-sizing: border-box;
+				width: 100%;
+
+				&:hover,
+				&:active {
+					border: 1px solid @color_green;
+				}
+			}
+		}
+
+		div.controls {
+			display: inline-block;
+			vertical-align: top;
+
+			button {
+				padding: 1em 2.5em;
+				border: none;
+				background-color: @color_green;
+				color: @color_text;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover,
+				&:active {
+					background-color: fade(@color_green, 50%);
+				}
+			}
+		}
+	}
+}
+
 header {
- 	padding: @section_spacing calc(~'(100% - 1200px)' / 2);
+ 	padding-top: @section_spacing;
+ 	padding-bottom: @section_spacing;
+ 	padding-left: calc(~'(100% - 1200px) / 2');
+ 	padding-right: calc(~'(50% - 2rem)');
  	background-image: url(../images/header.jpg);
  	background-repeat: no-repeat;
  	background-size: 100% auto;
@@ -29,16 +125,13 @@ header {
 }
 
 header h1 {
- 	width: 40%;
-	position: absolute;
-	top: 22%;
-	left: 18%;
 	font-size: 4rem;
 	font-weight: 400;
+	transform: translate(10%, 30%);
+	transition: all 0.3s;
 
 	html[dir=rtl] & {
-		left: none;
-		right: 18%;
+		transform: translate(70%, 30%);
 	}
 }
 
@@ -47,19 +140,13 @@ header h1 {
 */
 
 section#introduction {
- 	margin-bottom: -1rem;
  	position: relative;
-
- 	& article h1,
- 	& article p {
- 		margin-left: 5rem;
- 	}
 
  	& h1#fade_out {
 		width: 650px;
 		position: absolute;
-		bottom: 4%;
-		left: 7%;
+		bottom: 0;
+		left: calc(~'(100% - 1200px) / 2');
 		margin: 0px;
 		padding: 0px;
 
@@ -81,50 +168,47 @@ section#introduction {
 }
 
 section#introduction article:nth-of-type(1) {
- 	padding: 1rem;
+ 	padding-top: 5%;
+ 	padding-bottom: 5%;
+ 	padding-left: calc(~'(100% - 1200px) / 2');
+ 	// around two third
+ 	padding-right: 61%;
  	background-image: url(../images/page_2.jpg);
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center center;
- 	min-height: 350px;
 
  	& h1 {
- 		width: 534px;
  		font-size: 2.5rem;
  		font-weight: 400;
- 		margin-top: 4rem;
+ 		margin-top: 1rem
  	}
 
  	& p {
- 		width: 30%;
  		font-size: 1.5rem;
  	}
 
  	html[dir=rtl] & {
  		background-image: url(../images/page_2_rtl.jpg);
-
- 		& h1 {
- 			margin-right: 5rem;
- 		}
-
- 		& p {
- 			margin-right: 5rem;
- 		}
+ 		padding-left: 61%;
+	 	padding-right: calc(~'(100% - 1200px) / 2');
  	}
 }
 
 section#introduction article:nth-of-type(2) {
- 	padding: 1rem;
+ 	padding-top: 4%;
+ 	padding-bottom: 4%;
+ 	padding-left: calc(~'(100% - 1200px) / 2');
+ 	padding-right: 61%;
  	background-image: url(../images/page_3.jpg);
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center center;
- 	min-height: 350px;
+ 	min-height: 230px;
 
  	& p {
- 		width: 30%;
  		font-size: 1.5rem;
- 		margin-top: 10%;
+ 		margin-top: 1rem;
 
  		& em {
  			font-style: normal;
@@ -145,37 +229,34 @@ section#introduction article:nth-of-type(2) {
 
  	html[dir=rtl] & {
  		background-image: url(../images/page_3_rtl.jpg);
-
- 		& p {
- 			margin-right: 5rem;
- 		}
+ 		padding-left: 61%;
+ 		padding-right: calc(~'(100% - 1200px) / 2');
  	}
 }
 
 section#introduction article:nth-of-type(3) {
- 	padding: 1rem;
+ 	padding-top: 4%;
+ 	padding-bottom: 4%;
+ 	padding-left: calc(~'(100% - 1200px) / 2');
+ 	padding-right: 61%;
  	background-image: url(../images/page_4.jpg);
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center center;
- 	min-height: 350px;
+ 	min-height: 230px;
 
  	& h1 {
  		display: none;
  	}
 
  	& p {
- 		margin-top: 4rem;
- 		width: 35%;
  		font-size: 1.5rem;
 	}
 
 	html[dir=rtl] & {
  		background-image: url(../images/page_4_rtl.jpg);
-
- 		& p {
- 			margin-right: 5rem;
- 		}
+ 		padding-left: 61%;
+ 		padding-right: calc(~'(100% - 1200px) / 2');
  	}
 }
 
@@ -184,49 +265,47 @@ section#introduction article:nth-of-type(3) {
 */
 
 section#depth article:nth-of-type(1) {
- 	padding: 1rem;
+	padding-top: @section_spacing;
+	padding-bottom: 10%;
+	// content should be about 50% width
+	padding-left: 23%;
+	padding-right: 23%;
  	background-image: url(../images/page_5.jpg);
  	background-repeat: no-repeat;
- 	background-size: 100% auto;
+ 	background-size: 100% 100%;
  	background-position: center center;
- 	min-height: 400px;
  	text-align: center;
 
  	& h1 {
  		font-size: 2.5rem;
  		font-weight: 400;
- 		margin-top: 3rem;
  	}
 
  	& p {
  		font-size: 1.5rem;
  		display: block;
  		margin: 0 auto;
- 		width: 33%;
  	}
 }
 
 section#depth article:nth-of-type(2) {
- 	padding: 1rem;
+	padding-top: 8%;
+ 	padding-bottom: 8%;
+ 	padding-left: calc(~'(100% - 1200px) / 2');
+ 	padding-right: 61%;
  	background-image: url(../images/page_6.jpg);
  	background-repeat: no-repeat;
  	background-size: 100% auto;
  	background-position: center center;
- 	min-height: 400px;
 
  	& p {
- 		margin-top: 8%;
- 		width: 33%;
  		font-size: 1.5rem;
- 		margin-left: 5rem;
  	}
 
  	html[dir=rtl] & {
  		background-image: url(../images/page_6_rtl.jpg);
-
- 		& p {
- 			margin-right: 5rem;
- 		}
+ 		padding-left: 61%;
+ 		padding-right: calc(~'(100% - 1200px) / 2');
  	}
 }
 
@@ -252,10 +331,13 @@ section#example {
 
 section#example article {
 	text-align: center;
+	padding-left: 23%;
+	padding-right: 23%;
+	padding-top: @section_spacing;
+	padding-bottom: @section_spacing;
 
 	& h1 {
 		display: block;
-		width: 50%;
 		margin: 0 auto;
 		font-size: 2.5rem;
 		font-weight: 400;
@@ -263,7 +345,6 @@ section#example article {
 
 	& p {
 		display: block;
-		width: 50%;
 		margin: 0 auto;
 		margin-top: @paragraph_spacing;
 		font-size: 1.3rem;
@@ -272,6 +353,7 @@ section#example article {
 
 	& p:last-of-type {
 		position: absolute;
+		width: 50%;
 	    bottom: 0;
 	    left: 25%;
 	    border: 1px solid white;
@@ -323,32 +405,18 @@ section#about article:nth-of-type(1) {
 	background-size: 300px 300px;
 	background-repeat: no-repeat;
 	min-height: 300px;
-	padding: 1rem;
-
-	& h1 {
-		width: 45%;
-		margin-left: 13%;
-
-	}
+	padding: @section_spacing 0;
+	padding-left: calc(~'(100% - 900px) / 2');
+	padding-right: 50%;
 
 	& p {
-		width: 40%;
 		font-size: 1.3rem;
-		margin-left: 13%;
 	}
 
 	html[dir=rtl] & {
 		background-position: 20%;
-
-		& h1 {
-			margin-left: 0;
-			margin-right: 13%;
-		}
-
-		& p {
-			margin-left: 0;
-			margin-right: 13%;
-		}
+		padding-left: 50%;
+		padding-right: calc(~'(100% - 900px) / 2');
 	}
 }
 
@@ -358,33 +426,18 @@ section#about article:nth-of-type(2) {
 	background-size: 170px 300px;
 	background-repeat: no-repeat;
 	min-height: 300px;
-	padding: 1rem;
-	margin-top: 4rem;
-
-	& h1 {
-		width: 45%;
-		margin-left: 13%;
-
-	}
+	padding: @section_spacing 0;
+	padding-left: calc(~'(100% - 900px) / 2');
+	padding-right: 50%;
 
 	& p {
-		width: 40%;
 		font-size: 1.3rem;
-		margin-left: 13%;
 	}
 
 	html[dir=rtl] & {
 		background-position: 23%;
-
-		& h1 {
-			margin-left: 0;
-			margin-right: 13%;
-		}
-
-		& p {
-			margin-left: 0;
-			margin-right: 13%;
-		}
+		padding-left: 50%;
+		padding-right: calc(~'(100% - 900px) / 2');
 	}
 }
 
@@ -402,11 +455,11 @@ section#development article:nth-of-type(1) {
 	background-size: 500px 200px, 350px 350px;
 	background-repeat: no-repeat;
 	min-height: 550px;
-	padding: 1rem;
+	padding: @section_spacing 0;
+	padding-left: calc(~'(100% - 900px) / 2');
+	padding-right: 50%;
 
 	& h1 {
-		width: 30%;
-		margin-left: 17%;
 
 		&:first-of-type{
 			font-weight: 400;
@@ -414,23 +467,13 @@ section#development article:nth-of-type(1) {
 	}
 
 	& p {
-		width: 28%;
 		font-size: 1.3rem;
-		margin-left: 17%;
 	}
 
 	html[dir=rtl] & {
 		background-position: 60% 100%, 20%;
-
-		& h1 {
-			margin-left: 0;
-			margin-right: 17%;
-		}
-
-		& p {
-			margin-left: 0;
-			margin-right: 17%;
-		}
+		padding-left: 50%;
+		padding-right: calc(~'(100% - 900px) / 2');
 	}
 }
 
@@ -440,12 +483,11 @@ section#development article:nth-of-type(2) {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	min-height: 400px;
-	padding: 1rem;
-	margin-top: 4rem;
+	padding: @section_spacing 0;
+	padding-left: calc(~'(100% - 900px) / 2');
+	padding-right: 50%;
 
 	& h1 {
-		width: 30%;
-		margin-left: 17%;
 
 		&:first-of-type{
 			font-weight: 400;
@@ -454,24 +496,14 @@ section#development article:nth-of-type(2) {
 	}
 
 	& p {
-		width: 28%;
 		font-size: 1.3rem;
-		margin-left: 17%;
 	}
 
 	html[dir=rtl] & {
 		background-image: url(../images/earphones_rtl.jpg);
 		background-position: 23%;
-
-		& h1 {
-			margin-left: 0;
-			margin-right: 17%;
-		}
-
-		& p {
-			margin-left: 0;
-			margin-right: 17%;
-		}
+		padding-left: 50%;
+		padding-right: calc(~'(100% - 900px) / 2');
 	}
 }
 
@@ -525,42 +557,33 @@ section#advantages {
 */
 
 footer {
-	background-image: url(../images/footer.jpg);
-	background-position: 80%;
-	background-size: 100%;
-	background-repeat: no-repeat;
-	min-height: 500px;
 
 	& article {
-		padding: 1rem;
+		padding-top: @section_spacing;
+		padding-bottom: 1rem;
+		padding-left: calc(~'(100% - 900px) / 2');
+		padding-right: 50%;
+
+		background-image: url(../images/footer.jpg);
+		background-position: 80% 100%;
+		background-size: 100% auto;
+		background-repeat: no-repeat;
 
 		& h1 {
-			width: 40%;
 			display: block;
-			margin-left: 17%;
-			margin-top: 2rem;
 		}
 
 		& p {
-			width: 35%;
 			display: block;
-			margin-left: 17%;
 		}
 	}
 
 	html[dir=rtl] & {
 		background-image: url(../images/footer_rtl.jpg);
 		background-position: 20%;
-
-		& h1 {
-			margin-left: 0;
-			margin-right: 17%;
-		}
-
-		& p {
-			margin-left: 0;
-			margin-right: 17%;
-		}
+		background-repeat: no-repeat;
+		padding-left: 50%;
+		padding-right: calc(~'(100% - 900px) / 2');
 	}
 }
 
@@ -570,5 +593,95 @@ div.copyright {
 	color: white;
 
 	background-position: calc(~'50% - 100px') center
+}
+
+@media only screen and (max-device-width: 1200px) {
+	header {
+		padding-top: 0;
+		min-height: 500px;
+	}
+
+	section#introduction > article:nth-of-type(1),
+	section#introduction > article:nth-of-type(2),
+	section#introduction > article:nth-of-type(3) {
+		box-sizing: border-box;
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	section#introduction {
+		article:nth-of-type(3) {
+			padding-right: 55%;
+		}
+
+		h1#fade_out {
+			left: 0;
+			font-size: 2.5rem;
+		}
+	}
+
+	section#depth > article:nth-of-type(1),
+	section#depth > article:nth-of-type(2) {
+
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	section#example, {
+		article {
+			h1 {
+			font-size: 1.5rem;
+			}
+
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+
+	section#about > article:nth-of-type(1),
+	section#about > article:nth-of-type(2) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	section#about a {
+		transform: translate(40px, -150px);
+	}
+
+	section#development > article:nth-of-type(1),
+	section#development > article:nth-of-type(2) {
+		h1 {
+			font-size: 1.5rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+
+	section#development article:nth-of-type(1) {
+		background-position: 15% 85%, 80% 15%;
+	}
+
+	div#contact_form.visible {
+		top: 30px;
+	}
 }
 
